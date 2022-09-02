@@ -121,8 +121,8 @@ Options.Triggers.push({
           // Map from coordinate position to intercardinal quadrant
           const convertCoordinatesToDirection = (x, y) => {
             if (x > 100)
-              return y < 100 ? 'NE' : 'SE';
-            return y < 100 ? 'NW' : 'SW';
+              return y < 100 ? '2' : '3';
+            return y < 100 ? '1' : '4';
           };
           const direction = convertCoordinatesToDirection(combatant.PosX, combatant.PosY);
           data.topazRays[index]?.push(direction);
